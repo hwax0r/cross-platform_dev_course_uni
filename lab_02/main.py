@@ -27,7 +27,7 @@ def timeit(f):
     return timed
 
 
-def hash_(to_be_processed: str, base: int, mod: int):
+def hash_(to_be_processed: str, base: int, mod: int) -> int:
     hash_calc = 0
     for char in to_be_processed:
         symbol: int = ord(char)
@@ -36,7 +36,7 @@ def hash_(to_be_processed: str, base: int, mod: int):
 
 
 @timeit
-def my_solution(target_directory: str):
+def my_solution(target_directory: str) -> None:
     """
     Заданием предусмотрено разрешение коллизий названий файлов
     добавлением к началу названия файла соответствующую папку,
@@ -86,7 +86,7 @@ def my_solution(target_directory: str):
 
 
 @timeit
-def recommended_solution(target_directory: str):
+def recommended_solution(target_directory: str) -> None:
     for current_path, folders, files in os.walk(target_directory):
         for file in files:
             # чистка от системных файлов
