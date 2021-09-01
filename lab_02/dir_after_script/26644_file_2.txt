@@ -1,0 +1,1 @@
+Some text in file_2.txt in dir_1_level_0
