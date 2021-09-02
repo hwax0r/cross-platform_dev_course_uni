@@ -83,6 +83,7 @@ def my_solution(target_directory: str) -> None:
     roots_report = open(f'{target_directory}{SEPARATOR}work_report.txt', 'a')
     for key, value in sorted(roots.items()):
         print("{}: {}".format(key, value), file=roots_report)
+    roots_report.close()
 
 
 @timeit

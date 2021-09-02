@@ -43,7 +43,10 @@ def solution(book_path: str) -> str:
 def main():
     book_path: str = f'{os.getcwd()}{os.sep}the_possessed.txt'
     result: str = solution(book_path=book_path)
-    print(f'Самое длинное слово с одним гласным: {result}')
+    if result == '':
+        print('В тексте нет слов с одним гласным')
+    else:
+        print(f'Самое длинное слово с одним гласным: {result}')
 
 
 if __name__ == '__main__':
