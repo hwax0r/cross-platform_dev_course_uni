@@ -1,0 +1,11 @@
+{
+  "file name": "Crime and Punishment.txt",
+  "words" : [
+    "in",
+    "a",
+    "Nastasya"
+  ],
+  "min_len": 20,
+  "max_len": 200,
+  "examples": 5
+}

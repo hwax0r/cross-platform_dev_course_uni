@@ -80,7 +80,7 @@ class Book:
         for paragraph_idx in range(len(self.book_paragraphs)):
             paragraph: list = self.book_paragraphs[paragraph_idx]
 
-            if set(request.words).intersection(set(paragraph)):
+            if set(request.words).issubset(set(paragraph)):
                 if request.ex_min_len < len(paragraph) < request.ex_max_len+1:
                     responses.append(Response(self.file_name, paragraph_idx, paragraph))
             if len(responses) == request.ex_amount:
