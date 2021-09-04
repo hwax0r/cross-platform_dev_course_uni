@@ -63,7 +63,7 @@ class Book:
         for sentence_idx in range(len(self.book_sentences)):
             sentence: str = self.book_sentences[sentence_idx]
 
-            if set(request.words).intersection(set(sentence.split())):
+            if set(request.words).issubset(set(sentence.split())):
                 if request.ex_min_len < len(sentence) < request.ex_max_len+1:
                     responses.append(Response(self.file_name, sentence_idx, sentence))
             if len(responses) == request.ex_amount:

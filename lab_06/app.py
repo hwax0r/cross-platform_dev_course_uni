@@ -3,7 +3,7 @@ from flask import render_template
 from flask import Response
 from words_api import find_words_by_request
 
-app = Flask("My app", template_folder="./templates")
+app = Flask("My app", template_folder="./templates", static_folder='./static')
 
 
 @app.route('/')

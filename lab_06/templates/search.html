@@ -1,27 +1,32 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport"
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylesheets/style.css') }}" />
+    <meta charset="UTF-8">
+    <meta name="viewport"
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title> Поиск слов в книге Crime and Punishment </title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Поиск слов в книге Crime and Punishment </title>
 </head>
-<body>
-  {% block content %}
+<body  >
+{% block content %}
     <h1>Поиск слов в книге Crime and Punishment</h1>
-  <form action="{{url_for('result')}}">
-    <label for="words">Введите слово или слова (через символ ;),
-        которые вы хотите найти в книге преступление и наказание</label>
-    <br>
+    <form action="{{url_for('result')}}" style="width: 290px">
+        <label for="words">Введите слово или слова (через символ ;),
+            которые вы хотите найти в книге: </label>
+        <br>
+        <label for="words">Crime and Punishment</label>
+        <br>
         <input id="words" name="words" type="text" value="{{words}}">
-    <br>
-      <label for="examples">Введите число примеров предложений</label>
-    <br>
+        <p></p>
+
+        <br>
+        <label for="examples">Введите число примеров предложений</label>
+        <br>
         <input id="examples" name="examples" type="number" value="{{examples}}">
-    <br><br>
-    <input type="submit" value="Отправить">
-  </form>
-  {% endblock %}
+        <br><br>
+        <input type="submit" value="Отправить">
+    </form>
+{% endblock %}
 </body>
 </html>
