@@ -8,14 +8,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title> Поиск слов в книге Crime and Punishment </title>
 </head>
-<body  >
+<body>
 {% block content %}
     <h1>Поиск слов в книге Crime and Punishment</h1>
-    <form action="{{url_for('result')}}" style="width: 290px">
+    <form action="{{url_for('result')}}">
         <label for="words">Введите слово или слова (через символ ;),
-            которые вы хотите найти в книге: </label>
+            которые вы хотите найти в книге: Crime and Punishment</label>
         <br>
-        <label for="words">Crime and Punishment</label>
         <br>
         <input id="words" name="words" type="text" value="{{words}}">
         <p></p>

@@ -2,6 +2,7 @@ from flask import Flask, redirect, url_for, request
 from flask import render_template
 from flask import Response
 from words_api import find_words_by_request
+import os
 
 app = Flask("My app", template_folder="./templates", static_folder='./static')
 
@@ -38,3 +39,4 @@ def req():
     obj = request.get_json(force=True)
     sentences = find_words_by_request(obj)
     return sentences, 200
+
